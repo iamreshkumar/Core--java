@@ -21,8 +21,27 @@ public class Test_11 {
 	
 	ListIterator litr=al.listIterator();
 	
-	while()
-	
-	
+	while(litr.hasNext()) {
+		Object obj=litr.next();
+		System.out.println("current element :"+obj);
+		
+		if(obj instanceof String) {
+			String s=(String)obj;
+			litr.set(s.toUpperCase());
+		}
+		else if(obj instanceof Integer){
+			if(count==1) {
+				litr.add(20);
+				count++;
+			}
+		}
 	}
+	System.out.println("Array List elements after Iteration::"+al);
+	// Reterving elements in reverse order
+	
+	while(litr.hasPrevious()) {
+		Object obj=litr.previous();
+		System.out.println(obj);
+	}
+  }
 }
